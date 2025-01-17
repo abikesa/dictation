@@ -457,43 +457,84 @@ document.write(`
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 <span class="kn">import</span> <span class="nn">networkx</span> <span class="k">as</span> <span class="nn">nx</span>
 
+<span class="c1"># Placeholders (Substitute) for the neural network visualization</span>
+<span class="c1">#1 Time (Paleturquoise)</span>
+<span class="c1">#2 Parallel (Lightgreen)</span>
+<span class="c1">#3 Cost (Lightsalmon)</span>
+<span class="c1">#4 Life (Lightsalmon)</span>
+<span class="c1">#5 Earth (Lightsalmon)</span>
+<span class="c1">#6 Cosmos (Lightsalmon)</span>
+<span class="c1">#7 Perception (Yellow)</span>
+<span class="c1">#8 Enterprise (Paleturquoise)</span>
+<span class="c1">#9 Digital-Twin (Lightsalmon)</span>
+<span class="c1">#10 Commensalism (Paleturquoise)</span>
+<span class="c1">#11 Mutualism (Lightgreen)</span>
+<span class="c1">#12 Parasitism (Lightsalmon)</span>
+<span class="c1">#13 Defense (Paleturquoise)</span>
+<span class="c1">#14 Immunity (Lightgreen)</span>
+<span class="c1">#15 Retreat (Lightgreen)</span>
+<span class="c1">#16 Lethality (Lightgreen)</span>
+<span class="c1">#17 Offense (Lightsalmon)</span>
+
 <span class="c1"># Define the neural network structure</span>
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Il Sole é L’altre Stelle&#39;</span><span class="p">,</span> <span class="s1">&#39;La Terra&#39;</span><span class="p">,</span> <span class="s1">&#39;Vita é Bella&#39;</span><span class="p">,</span> <span class="s1">&#39;Il Sacrificio&#39;</span><span class="p">,</span> <span class="s1">&#39;Mia Storia&#39;</span><span class="p">,</span> <span class="s1">&#39;Dono Per Me&#39;</span><span class="p">],</span> <span class="c1"># Divine: Cosmos-Earth; Red Queen: Life-Cost; Machine: Parallel-Time</span>
-        <span class="s1">&#39;Perception&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Che Mio&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Allegria&#39;</span><span class="p">,</span> <span class="s1">&#39;Ottimismo&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Anarchia&#39;</span><span class="p">,</span> <span class="s1">&#39;Oligarchia&#39;</span><span class="p">,</span> <span class="s1">&#39;Padre Fece&#39;</span><span class="p">],</span>
-        <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Dynamic&#39;</span><span class="p">,</span> <span class="s1">&#39;Partisan&#39;</span><span class="p">,</span> <span class="s1">&#39;Common Wealth&#39;</span><span class="p">,</span> <span class="s1">&#39;Non-Partisan&#39;</span><span class="p">,</span> <span class="s1">&#39;Static&#39;</span><span class="p">]</span>
+        <span class="c1"># Divine and narrative framework in the film</span>
+        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Cosmos, Theogony&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s grand, universal sense of play and creativity</span>
+            <span class="s1">&#39;Earth, Greece&#39;</span><span class="p">,</span>  <span class="c1"># The tangible and oppressive reality of the Holocaust</span>
+            <span class="s1">&#39;Life, Animals &amp; Plants&#39;</span><span class="p">,</span>  <span class="c1"># The stakes of survival and human connection</span>
+            <span class="s1">&#39;Tacful: Sacrifice&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s ultimate sacrifice</span>
+            <span class="s1">&#39;Brute Strength&#39;</span><span class="p">,</span>  <span class="c1"># Giosuè’s personal narrative, shaped by his father 👨🏾💪🏾</span>
+            <span class="s1">&#39;Clever Strategy&#39;</span>  <span class="c1"># The &quot;gift&quot; of innocence and joy given by Guido 👩🏾🧠</span>
+        <span class="p">],</span>
+        <span class="c1"># Perception and filtering of reality</span>
+        <span class="s1">&#39;Perception&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Owl: Surveillance&#39;</span><span class="p">],</span>  <span class="c1"># 🦉 How Giosuè interprets his father’s actions and words</span>
+        <span class="c1"># Agency and Guido’s defining traits</span>
+        <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Threats: Neighbors&#39;</span><span class="p">,</span> <span class="s1">&#39;Realm: City-State&#39;</span><span class="p">],</span>  <span class="c1"># Guido’s tools for shaping the narrative</span>
+        <span class="c1"># Generativity and legacy</span>
+        <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Acropolis: Parasitism&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s rebellion against oppressive reality</span>
+            <span class="s1">&#39;Olympus: Mutualism&#39;</span><span class="p">,</span>  <span class="c1"># The systemic constraints he navigates</span>
+            <span class="s1">&#39;Zeus: Commensalism&#39;</span>  <span class="c1"># The actions and sacrifices Guido made for his son</span>
+        <span class="p">],</span>
+        <span class="c1"># Physical realities and their interplay</span>
+        <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Sword: Offense&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s improvisational actions, like creating the “game” 🗡️ </span>
+            <span class="s1">&#39;Serpent: Lethality&#39;</span><span class="p">,</span>  <span class="c1"># The direct oppression he faces 🐍 </span>
+            <span class="s1">&#39;Horse: Retreat&#39;</span><span class="p">,</span>  <span class="c1"># Shared humanity and joy despite hardship 🐎 </span>
+            <span class="s1">&#39;Helmet: Immunity&#39;</span><span class="p">,</span>  <span class="c1"># Universal themes transcending sides 🪖 </span>
+            <span class="s1">&#39;Shield: Defense&#39;</span>  <span class="c1"># The immovable, tragic finality of the Holocaust 🛡️</span>
+        <span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
 <span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Che Mio&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span> <span class="s1">&#39;Dono Per Me&#39;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span> <span class="s1">&#39;Mia Storia&#39;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span> <span class="s1">&#39;Il Sole é L’altre Stelle&#39;</span><span class="p">,</span> <span class="s1">&#39;La Terra&#39;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="s1">&#39;lightgray&#39;</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Agency&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Ottimismo&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
+    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Owl: Surveillance&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>  <span class="c1"># Perception as the interpretive bridge</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Clever Strategy&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Optimism and the &quot;gift&quot;</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Brute Strength&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Harmony and legacy</span>
+    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Cosmos, Theogony&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth, Greece&#39;</span><span class="p">]:</span>
+        <span class="k">return</span> <span class="s1">&#39;lightgray&#39;</span>  <span class="c1"># Context of divine and tangible</span>
+    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Agency&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Realm: City-State&#39;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Guido’s defining hope</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Padre Fece&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Oligarchia&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Anarchia&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Zeus: Commensalism&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Guido’s ultimate acts of selflessness</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Olympus: Mutualism&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Navigating systemic structures</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Acropolis: Parasitism&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Rebellion and creativity</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Static&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Non-Partisan&#39;</span><span class="p">,</span> <span class="s1">&#39;Common Wealth&#39;</span><span class="p">,</span> <span class="s1">&#39;Partisan&#39;</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Dynamic&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>
-    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Shield: Defense&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># The unchanging, tragic realities</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Helmet: Immunity&#39;</span><span class="p">,</span> <span class="s1">&#39;Horse: Retreat&#39;</span><span class="p">,</span> <span class="s1">&#39;Serpent: Lethality&#39;</span><span class="p">]:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Shared humanity and resilience</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Sword: Offense&#39;</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Guido’s improvisation and vitality</span>
+    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color for tension or conflict</span>
 
 <span class="c1"># Calculate positions for nodes</span>
 <span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
@@ -519,7 +560,10 @@ document.write(`
 
     <span class="c1"># Add edges (without weights)</span>
     <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Perception&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Perception&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Generativity&#39;</span><span class="p">),</span> <span class="p">(</span><span class="s1">&#39;Generativity&#39;</span><span class="p">,</span> <span class="s1">&#39;Physicality&#39;</span><span class="p">)</span>
+        <span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Perception&#39;</span><span class="p">),</span>  <span class="c1"># Giosuè interprets the &quot;World&quot; through &quot;Che Mio&quot;</span>
+        <span class="p">(</span><span class="s1">&#39;Perception&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">),</span>  <span class="c1"># Guido’s cheerfulness shapes Giosuè’s perception</span>
+        <span class="p">(</span><span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Generativity&#39;</span><span class="p">),</span>  <span class="c1"># Guido’s optimism drives his generative actions</span>
+        <span class="p">(</span><span class="s1">&#39;Generativity&#39;</span><span class="p">,</span> <span class="s1">&#39;Physicality&#39;</span><span class="p">)</span>  <span class="c1"># His legacy plays out in the physical world</span>
     <span class="p">]:</span>
         <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
         <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
@@ -527,12 +571,12 @@ document.write(`
                 <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 
     <span class="c1"># Draw the graph</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
     <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
         <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
         <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
     <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Senza regole, si rischia di cadere nell&#39;anarchia&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Symbiosis &amp; Games Animals Play&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the visualization</span>
@@ -542,7 +586,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../_images/214f098059e26ebdf0f2d5460c2ab4c6415d5755c348524f3a3b09eb6f4a4934.png" src="../_images/214f098059e26ebdf0f2d5460c2ab4c6415d5755c348524f3a3b09eb6f4a4934.png" />
+<img alt="../_images/8c5452f539aaabd20dca84701010e503431293e60e50028be116386181ead5d3.png" src="../_images/8c5452f539aaabd20dca84701010e503431293e60e50028be116386181ead5d3.png" />
 </div>
 </div>
 <figure class="align-default" id="id1">
