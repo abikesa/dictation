@@ -450,9 +450,9 @@ document.write(`
         <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Threats: Neighbors&#39;</span><span class="p">,</span> <span class="s1">&#39;Realm: City-State&#39;</span><span class="p">],</span>  <span class="c1"># Guido’s tools for shaping the narrative</span>
         <span class="c1"># Generativity and legacy</span>
         <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;Acropolis&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s rebellion against oppressive reality</span>
-            <span class="s1">&#39;Olympus&#39;</span><span class="p">,</span>  <span class="c1"># The systemic constraints he navigates</span>
-            <span class="s1">&#39;Zeus&#39;</span>  <span class="c1"># The actions and sacrifices Guido made for his son</span>
+            <span class="s1">&#39;Acropolis: Parasitism&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s rebellion against oppressive reality</span>
+            <span class="s1">&#39;Olympus: Mutualism&#39;</span><span class="p">,</span>  <span class="c1"># The systemic constraints he navigates</span>
+            <span class="s1">&#39;Zeus: Commensalism&#39;</span>  <span class="c1"># The actions and sacrifices Guido made for his son</span>
         <span class="p">],</span>
         <span class="c1"># Physical realities and their interplay</span>
         <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span> <span class="p">[</span>
@@ -477,11 +477,11 @@ document.write(`
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Agency&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Realm: City-State&#39;</span><span class="p">:</span>
         <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Guido’s defining hope</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Zeus&#39;</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Zeus: Commensalism&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Guido’s ultimate acts of selflessness</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Olympus&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Olympus: Mutualism&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Navigating systemic structures</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Acropolis&#39;</span><span class="p">:</span>
+        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Acropolis: Parasitism&#39;</span><span class="p">:</span>
             <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Rebellion and creativity</span>
     <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Shield: Defense&#39;</span><span class="p">:</span>
@@ -532,7 +532,7 @@ document.write(`
         <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
         <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
     <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Athena&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Symbiosis &amp; Games Animals Play&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the visualization</span>
@@ -542,7 +542,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="_images/b7daf23ba2e3a78652558b5a9711abe357a6398471cf84dc43c8b98e6ec61b63.png" src="_images/b7daf23ba2e3a78652558b5a9711abe357a6398471cf84dc43c8b98e6ec61b63.png" />
+<img alt="_images/8c5452f539aaabd20dca84701010e503431293e60e50028be116386181ead5d3.png" src="_images/8c5452f539aaabd20dca84701010e503431293e60e50028be116386181ead5d3.png" />
 </div>
 </div>
 <figure class="align-default" id="id2">
