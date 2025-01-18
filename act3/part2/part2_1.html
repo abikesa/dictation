@@ -421,7 +421,7 @@ document.write(`
 <h1>Base<a class="headerlink" href="#base" title="Permalink to this heading">#</a></h1>
 <div class="tip admonition">
 <p class="admonition-title">Between the lines</p>
-<p><em>Peace, good pint-pot; peace, good tickle-brain.—Harry, I do not only marvel where thou spendest thy time, but also how thou art accompanied. For though the camomile, the more it is trodden on, the faster it grows, yet youth, the more it is wasted, the sooner it wears. That thou art my son I have partly thy mother’s word, partly my own opinion, but chiefly a villainous trick of thine eye, and a foolish hanging of thy nether lip, that doth warrant me. If then thou be son to me, here lies the point: why, being son to me, art thou so pointed at? Shall the blessed sun of heaven prove a micher, and eat blackberries? A question not to be asked. Shall the son of England prove a thief, and take purses? A question to be asked. There is a thing, Harry, which thou hast often heard of, and it is known to many in our land by the name of pitch. This pitch, as ancient writers do report, doth defile; so doth the company thou keepest. For, Harry, now I do not speak to thee in drink, but in tears; not in pleasure, but in passion; not in words only, but in woes also. And yet there is a virtuous man whom I have often noted in thy company, but I know not his name.</em><br />
+<p><em>Peace, good pint-pot; peace, good tickle-brain.—Harry, I do not only marvel where thou spendest thy <code class="docutils literal notranslate"><span class="pre">time</span></code>, but also how thou art accompanied. For though the camomile, the more it is trodden on, the faster it grows, yet youth, the more it is <code class="docutils literal notranslate"><span class="pre">wasted</span></code>, the sooner it wears. That thou art my son I have partly thy mother’s word, partly my own opinion, but chiefly a villainous trick of thine eye, and a foolish hanging of thy nether lip, that doth warrant me. If then thou be son to me, here lies the point: why, being son to me, art thou so pointed at? Shall the blessed sun of heaven prove a micher, and eat blackberries? A question not to be asked. Shall the son of England prove a thief, and take purses? A question to be asked. There is a thing, Harry, which thou hast often heard of, and it is known to many in our land by the name of pitch. This pitch, as ancient writers do report, doth defile; so doth the company thou keepest. For, Harry, now I do not speak to thee in drink, but in tears; not in pleasure, but in passion; not in words only, but in woes also. And yet there is a virtuous man whom I have often noted in thy company, but I know not his name.</em><br />
 – <a class="reference external" href="https://www.gutenberg.org/cache/epub/1516/pg1516-images.html">Falstaff</a></p>
 </div>
 <p>This is a moment of theatrical recursion, Falstaff embodying Henry IV in a “play within a play” that reveals Shakespeare’s genius for layering meaning through farce. Falstaff, the consummate trickster, takes on the role of the moralizing king, and Hal, performing Hal, indulges the charade with mischievous self-awareness. This doubling adds another layer of comedy, yes, but also veils a deeper critique.</p>
@@ -445,104 +445,62 @@ document.write(`
 <span class="c1"># Define the neural network structure</span>
 <span class="k">def</span> <span class="nf">define_layers</span><span class="p">():</span>
     <span class="k">return</span> <span class="p">{</span>
-        <span class="c1"># Divine and narrative framework in the film</span>
-        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s grand, universal sense of play and creativity</span>
-            <span class="s1">&#39;Earth&#39;</span><span class="p">,</span>  <span class="c1"># The tangible and oppressive reality of the Holocaust</span>
-            <span class="s1">&#39;Life&#39;</span><span class="p">,</span>  <span class="c1"># The stakes of survival and human connection</span>
-            <span class="s1">&#39;Il Sacrificio&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s ultimate sacrifice</span>
-            <span class="s1">&#39;Mia Storia&#39;</span><span class="p">,</span>  <span class="c1"># Giosuè’s personal narrative, shaped by his father</span>
-            <span class="s1">&#39;Dono Per Me&#39;</span>  <span class="c1"># The &quot;gift&quot; of innocence and joy given by Guido</span>
-        <span class="p">],</span>
-        <span class="c1"># Perception and filtering of reality</span>
-        <span class="s1">&#39;Perception&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Che Mio&#39;</span><span class="p">],</span>  <span class="c1"># How Giosuè interprets his father’s actions and words</span>
-        <span class="c1"># Agency and Guido’s defining traits</span>
-        <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cheerfulness&#39;</span><span class="p">,</span> <span class="s1">&#39;Optimism&#39;</span><span class="p">],</span>  <span class="c1"># Guido’s tools for shaping the narrative</span>
-        <span class="c1"># Generativity and legacy</span>
-        <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;Anarchy&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s rebellion against oppressive reality</span>
-            <span class="s1">&#39;Oligarchy&#39;</span><span class="p">,</span>  <span class="c1"># The systemic constraints he navigates</span>
-            <span class="s1">&#39;Padre Fece&#39;</span>  <span class="c1"># The actions and sacrifices Guido made for his son</span>
-        <span class="p">],</span>
-        <span class="c1"># Physical realities and their interplay</span>
-        <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="s1">&#39;Dynamic&#39;</span><span class="p">,</span>  <span class="c1"># Guido’s improvisational actions, like creating the “game”</span>
-            <span class="s1">&#39;Partisan&#39;</span><span class="p">,</span>  <span class="c1"># The direct oppression he faces</span>
-            <span class="s1">&#39;Common Wealth&#39;</span><span class="p">,</span>  <span class="c1"># Shared humanity and joy despite hardship</span>
-            <span class="s1">&#39;Non-Partisan&#39;</span><span class="p">,</span>  <span class="c1"># Universal themes transcending sides</span>
-            <span class="s1">&#39;Static&#39;</span>  <span class="c1"># The immovable, tragic finality of the Holocaust</span>
-        <span class="p">]</span>
+        <span class="s1">&#39;World&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Parallel&#39;</span><span class="p">,</span> <span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="p">],</span>
+        <span class="s1">&#39;Perception&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Simulation&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Agency&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Falstaff&#39;</span><span class="p">,</span> <span class="s1">&#39;Henry IV&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Parasitism&#39;</span><span class="p">,</span> <span class="s1">&#39;Mutualism&#39;</span><span class="p">,</span> <span class="s1">&#39;Commensalism&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Offense&#39;</span><span class="p">,</span> <span class="s1">&#39;Lethality&#39;</span><span class="p">,</span>  <span class="s1">&#39;Retreat&#39;</span><span class="p">,</span> <span class="s1">&#39;Immunity&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">]</span>
     <span class="p">}</span>
 
 <span class="c1"># Assign colors to nodes</span>
-<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="p">):</span>
-    <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Che Mio&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;yellow&#39;</span>  <span class="c1"># Perception as the interpretive bridge</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Dono Per Me&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Optimism and the &quot;gift&quot;</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Mia Storia&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Harmony and legacy</span>
-    <span class="k">if</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;World&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Cosmos&#39;</span><span class="p">,</span> <span class="s1">&#39;Earth&#39;</span><span class="p">]:</span>
-        <span class="k">return</span> <span class="s1">&#39;lightgray&#39;</span>  <span class="c1"># Context of divine and tangible</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Agency&#39;</span> <span class="ow">and</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Optimism&#39;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Guido’s defining hope</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Generativity&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Padre Fece&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># Guido’s ultimate acts of selflessness</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Oligarchy&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Navigating systemic structures</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Anarchy&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Rebellion and creativity</span>
-    <span class="k">elif</span> <span class="n">layer</span> <span class="o">==</span> <span class="s1">&#39;Physicality&#39;</span><span class="p">:</span>
-        <span class="k">if</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Static&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;paleturquoise&#39;</span>  <span class="c1"># The unchanging, tragic realities</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;Non-Partisan&#39;</span><span class="p">,</span> <span class="s1">&#39;Common Wealth&#39;</span><span class="p">,</span> <span class="s1">&#39;Partisan&#39;</span><span class="p">]:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightgreen&#39;</span>  <span class="c1"># Shared humanity and resilience</span>
-        <span class="k">elif</span> <span class="n">node</span> <span class="o">==</span> <span class="s1">&#39;Dynamic&#39;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Guido’s improvisation and vitality</span>
-    <span class="k">return</span> <span class="s1">&#39;lightsalmon&#39;</span>  <span class="c1"># Default color for tension or conflict</span>
+<span class="k">def</span> <span class="nf">assign_colors</span><span class="p">():</span>
+    <span class="n">color_map</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s1">&#39;yellow&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Simulation&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;paleturquoise&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Time&#39;</span><span class="p">,</span> <span class="s1">&#39;Henry IV&#39;</span><span class="p">,</span> <span class="s1">&#39;Commensalism&#39;</span><span class="p">,</span> <span class="s1">&#39;Defense&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;lightgreen&#39;</span><span class="p">:</span> <span class="p">[</span><span class="s1">&#39;Parallel&#39;</span><span class="p">,</span> <span class="s1">&#39;Mutualism&#39;</span><span class="p">,</span> <span class="s1">&#39;Immunity&#39;</span><span class="p">,</span> <span class="s1">&#39;Retreat&#39;</span><span class="p">,</span> <span class="s1">&#39;Lethality&#39;</span><span class="p">],</span>
+        <span class="s1">&#39;lightsalmon&#39;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="s1">&#39;Cost&#39;</span><span class="p">,</span> <span class="s1">&#39;Life&#39;</span><span class="p">,</span> <span class="s1">&#39;Falstaff&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;Parasitism&#39;</span><span class="p">,</span> <span class="s1">&#39;Offense&#39;</span>
+        <span class="p">],</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">{</span><span class="n">node</span><span class="p">:</span> <span class="n">color</span> <span class="k">for</span> <span class="n">color</span><span class="p">,</span> <span class="n">nodes</span> <span class="ow">in</span> <span class="n">color_map</span><span class="o">.</span><span class="n">items</span><span class="p">()</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">nodes</span><span class="p">}</span>
 
 <span class="c1"># Calculate positions for nodes</span>
-<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="p">):</span>
-    <span class="n">layer_size</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span>
-    <span class="n">start_y</span> <span class="o">=</span> <span class="o">-</span><span class="p">(</span><span class="n">layer_size</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span>  <span class="c1"># Center the layer vertically</span>
-    <span class="k">return</span> <span class="p">[(</span><span class="n">center_x</span> <span class="o">+</span> <span class="n">offset</span><span class="p">,</span> <span class="n">start_y</span> <span class="o">+</span> <span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">layer_size</span><span class="p">)]</span>
+<span class="k">def</span> <span class="nf">calculate_positions</span><span class="p">(</span><span class="n">layer</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">):</span>
+    <span class="n">y_positions</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="o">-</span><span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">layer</span><span class="p">))</span>
+    <span class="k">return</span> <span class="p">[(</span><span class="n">x_offset</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span> <span class="k">for</span> <span class="n">y</span> <span class="ow">in</span> <span class="n">y_positions</span><span class="p">]</span>
 
 <span class="c1"># Create and visualize the neural network graph</span>
 <span class="k">def</span> <span class="nf">visualize_nn</span><span class="p">():</span>
     <span class="n">layers</span> <span class="o">=</span> <span class="n">define_layers</span><span class="p">()</span>
+    <span class="n">colors</span> <span class="o">=</span> <span class="n">assign_colors</span><span class="p">()</span>
     <span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">DiGraph</span><span class="p">()</span>
     <span class="n">pos</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">node_colors</span> <span class="o">=</span> <span class="p">[]</span>
-    <span class="n">center_x</span> <span class="o">=</span> <span class="mi">0</span>  <span class="c1"># Align nodes horizontally</span>
 
     <span class="c1"># Add nodes and assign positions</span>
     <span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="p">(</span><span class="n">layer_name</span><span class="p">,</span> <span class="n">nodes</span><span class="p">)</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">items</span><span class="p">()):</span>
-        <span class="n">y_positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">center_x</span><span class="p">,</span> <span class="n">offset</span><span class="o">=-</span><span class="nb">len</span><span class="p">(</span><span class="n">layers</span><span class="p">)</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
-        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">y_positions</span><span class="p">):</span>
+        <span class="n">positions</span> <span class="o">=</span> <span class="n">calculate_positions</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">x_offset</span><span class="o">=</span><span class="n">i</span> <span class="o">*</span> <span class="mi">2</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">node</span><span class="p">,</span> <span class="n">position</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">nodes</span><span class="p">,</span> <span class="n">positions</span><span class="p">):</span>
             <span class="n">G</span><span class="o">.</span><span class="n">add_node</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer</span><span class="o">=</span><span class="n">layer_name</span><span class="p">)</span>
             <span class="n">pos</span><span class="p">[</span><span class="n">node</span><span class="p">]</span> <span class="o">=</span> <span class="n">position</span>
-            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">assign_colors</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="n">layer_name</span><span class="p">))</span>
+            <span class="n">node_colors</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">colors</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">node</span><span class="p">,</span> <span class="s1">&#39;lightgray&#39;</span><span class="p">))</span>  <span class="c1"># Default color fallback</span>
 
-    <span class="c1"># Add edges (without weights)</span>
-    <span class="k">for</span> <span class="n">layer_pair</span> <span class="ow">in</span> <span class="p">[</span>
-        <span class="p">(</span><span class="s1">&#39;World&#39;</span><span class="p">,</span> <span class="s1">&#39;Perception&#39;</span><span class="p">),</span>  <span class="c1"># Giosuè interprets the &quot;World&quot; through &quot;Che Mio&quot;</span>
-        <span class="p">(</span><span class="s1">&#39;Perception&#39;</span><span class="p">,</span> <span class="s1">&#39;Agency&#39;</span><span class="p">),</span>  <span class="c1"># Guido’s cheerfulness shapes Giosuè’s perception</span>
-        <span class="p">(</span><span class="s1">&#39;Agency&#39;</span><span class="p">,</span> <span class="s1">&#39;Generativity&#39;</span><span class="p">),</span>  <span class="c1"># Guido’s optimism drives his generative actions</span>
-        <span class="p">(</span><span class="s1">&#39;Generativity&#39;</span><span class="p">,</span> <span class="s1">&#39;Physicality&#39;</span><span class="p">)</span>  <span class="c1"># His legacy plays out in the physical world</span>
-    <span class="p">]:</span>
-        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_pair</span>
+    <span class="c1"># Add edges (automated for consecutive layers)</span>
+    <span class="n">layer_names</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">layers</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">layer_names</span><span class="p">)</span> <span class="o">-</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">source_layer</span><span class="p">,</span> <span class="n">target_layer</span> <span class="o">=</span> <span class="n">layer_names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">layer_names</span><span class="p">[</span><span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">]</span>
         <span class="k">for</span> <span class="n">source</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">source_layer</span><span class="p">]:</span>
             <span class="k">for</span> <span class="n">target</span> <span class="ow">in</span> <span class="n">layers</span><span class="p">[</span><span class="n">target_layer</span><span class="p">]:</span>
                 <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">source</span><span class="p">,</span> <span class="n">target</span><span class="p">)</span>
 
     <span class="c1"># Draw the graph</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">12</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
     <span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span>
         <span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="n">node_colors</span><span class="p">,</span> <span class="n">edge_color</span><span class="o">=</span><span class="s1">&#39;gray&#39;</span><span class="p">,</span>
-        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.1&quot;</span>
+        <span class="n">node_size</span><span class="o">=</span><span class="mi">3000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">9</span><span class="p">,</span> <span class="n">connectionstyle</span><span class="o">=</span><span class="s2">&quot;arc3,rad=0.2&quot;</span>
     <span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Questa è la mia storia: Vita è Bella&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Mutualism &amp; The Abyss&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">15</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 
 <span class="c1"># Run the visualization</span>
@@ -552,7 +510,7 @@ document.write(`
 </div>
 </details>
 <div class="cell_output docutils container">
-<img alt="../../_images/6e9a6e47eafe4cc0bd8602f59d5c9e4c6eb989e5a17b71fbd88f7fb9eb54b416.png" src="../../_images/6e9a6e47eafe4cc0bd8602f59d5c9e4c6eb989e5a17b71fbd88f7fb9eb54b416.png" />
+<img alt="../../_images/99cdae549ce86ac9dfc9dbb9bc35d5214792720e6a85f89955f30d0f60256198.png" src="../../_images/99cdae549ce86ac9dfc9dbb9bc35d5214792720e6a85f89955f30d0f60256198.png" />
 </div>
 </div>
 </section>
